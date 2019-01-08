@@ -86,11 +86,16 @@ function passThroughNeverCalled(result, callback){
 }
 
 
+// Create a cancellable task wrapper
+var task = cancAll();
+
+
 // Build our async graph
 var number = righto(task(getNumber));
 var number2 = righto(task(getNumber2));
 var added = righto(task(slowAddValues), number, number2);
 var result = righto(task(passThroughNeverCalled), added);
+
 
 // Execute the graph
 result(function(error, result){
@@ -98,6 +103,7 @@ result(function(error, result){
     // Got expected cancellation
     console.log(error.message) // 'timeout';
 });
+
 
 // Cancel execution part-way through
 setTimeout(function(){
