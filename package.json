@@ -1,7 +1,7 @@
 {
   "name": "canc-all",
   "version": "1.0.0",
-  "description": "",
+  "description": "Create a cancellable wrapper for an arbitrary tree of async tasks.",
   "main": "index.js",
   "scripts": {
     "test": "node test"
@@ -11,5 +11,17 @@
   "devDependencies": {
     "righto": "^5.1.0",
     "tape": "^4.9.2"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoryNunn/canc-all.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KoryNunn/canc-all/issues"
+  },
+  "homepage": "https://github.com/KoryNunn/canc-all#readme"
 }
